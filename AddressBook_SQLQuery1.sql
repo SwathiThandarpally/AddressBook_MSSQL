@@ -32,5 +32,8 @@ DELETE FROM AddressBookTable1 WHERE FirstName = 'Shreeram';
 --UseCase6- Retrieve Person belonging to a City or State
 SELECT * From AddressBookTable1 WHERE State='Telangana' ;
 
---UseCase7- understand the size of address book by City and State
+--UseCase7- Understand the size of address book by City and State
 SELECT COUNT(*) From AddressBookTable1 WHERE State='Maharashtra' AND City='Pune';
+
+--UseCase8- Retrieve entries sorted alphabetically by Person’s name for a given city
+SELECT * FROM AddressBookTable1 order by FirstName;
