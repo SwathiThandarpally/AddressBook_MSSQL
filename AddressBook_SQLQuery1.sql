@@ -22,7 +22,7 @@ VALUES('Marina','Singh','Colony','Pune','Maharashtra',123456,9876543210,'marina@
 ('Harisri','Kiran','Nagar','Bangalore','Karnataka',321456,7418529613,'kiran@gmail.com'),
 ('Vidan','Guru','Town','Hyderabda','Telangana',765432,9123457689,'vidan@gmail.com');
 Select * From AddressBookTable1;
-
+Update AddressBookTable1  set City =' Hyderabad ' where FirstName = 'Vidan';
 --UseCase4- Edit Contact
 UPDATE AddressBookTable1 SET Zip = 411506 WHERE LastName = 'Guru';
 
@@ -30,4 +30,7 @@ UPDATE AddressBookTable1 SET Zip = 411506 WHERE LastName = 'Guru';
 DELETE FROM AddressBookTable1 WHERE FirstName = 'Shreeram';
 
 --UseCase6- Retrieve Person belonging to a City or State
-SELECT * From AddressBookTable1 WHERE State='Telangana' AND City='Hyderabda';
+SELECT * From AddressBookTable1 WHERE State='Telangana' ;
+
+--UseCase7- understand the size of address book by City and State
+SELECT COUNT(*) From AddressBookTable1 WHERE State='Maharashtra' AND City='Pune';
