@@ -28,3 +28,6 @@ UPDATE AddressBookTable1 SET Zip = 411506 WHERE LastName = 'Guru';
 
 --UseCae5- Delete a person using person's name
 DELETE FROM AddressBookTable1 WHERE FirstName = 'Shreeram';
+
+--UseCase6- Retrieve Person belonging to a City or State
+SELECT * From AddressBookTable1 WHERE State='Telangana' AND City='Hyderabda';
