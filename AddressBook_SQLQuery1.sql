@@ -47,3 +47,9 @@ select * from AddressBookTable1;
 
 --UseCase10- get number of contact persons
 SELECT TypeOfCONTACT,COUNT(TypeOfCONTACT) From AddressBookTable1 Group By TypeOfCONTACT;
+
+--UseCase11- add person to both Friend and Family
+INSERT INTO AddressBookTable1(FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email,TypeOfCONTACT)
+VALUES('Urvin','Daina','ShivajiNagar','Hulsur','Karnataka',123987,7654321789,'urvin@gmail.com','Friend'),
+('=Moiz','Farzi','Pohan','Kolkata','WestBengal',546546,5432109876,'moiz@gmail.com','Family');
+Update AddressBookTable1  set FirstName  =' Moiz ' where LastName  = 'Farzi';
