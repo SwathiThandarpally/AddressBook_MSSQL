@@ -37,3 +37,10 @@ SELECT COUNT(*) From AddressBookTable1 WHERE State='Maharashtra' AND City='Pune'
 
 --UseCase8- Retrieve entries sorted alphabetically by Person’s name for a given city
 SELECT * FROM AddressBookTable1 order by FirstName;
+
+--UseCase9- Identify each Address Book with name and Type
+ALTER TABLE AddressBookTable1 ADD TypeOfCONTACT varchar(100) not null default 'FamilyPerson';
+update AddressBookTable1 set TypeOfCONTACT = 'Profession' where FirstName = 'Marina';
+SELECT * From AddressBookTable1 WHERE TypeOfCONTACT = 'FamilyPerson';-- FirstName ='Marina' ;
+SELECT * From AddressBookTable1 WHERE TypeOfCONTACT = 'Profession';
+select * from AddressBookTable1;
