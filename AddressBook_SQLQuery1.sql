@@ -44,3 +44,6 @@ update AddressBookTable1 set TypeOfCONTACT = 'Profession' where FirstName = 'Mar
 SELECT * From AddressBookTable1 WHERE TypeOfCONTACT = 'FamilyPerson';-- FirstName ='Marina' ;
 SELECT * From AddressBookTable1 WHERE TypeOfCONTACT = 'Profession';
 select * from AddressBookTable1;
+
+--UseCase10- get number of contact persons
+SELECT TypeOfCONTACT,COUNT(TypeOfCONTACT) From AddressBookTable1 Group By TypeOfCONTACT;
