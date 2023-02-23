@@ -26,5 +26,5 @@ Select * From AddressBookTable1;
 --UseCase4- Edit Contact
 UPDATE AddressBookTable1 SET Zip = 411506 WHERE LastName = 'Guru';
 
-
-
+--UseCae5- Delete a person using person's name
+DELETE FROM AddressBookTable1 WHERE FirstName = 'Shreeram';
